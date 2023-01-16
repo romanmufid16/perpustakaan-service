@@ -2,7 +2,6 @@ package com.romanmufid.pengembalian.controller;
 
 import com.romanmufid.pengembalian.entity.Pengembalian;
 import com.romanmufid.pengembalian.service.PengembalianService;
-import com.romanmufid.pengembalian.vo.ResponseTemplateVO;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -30,7 +29,7 @@ public class PengembalianController {
     }
     
     @GetMapping("/{id}")
-    public ResponseTemplateVO getPengembalianById(@PathVariable("id") Long id){
+    public Pengembalian getPengembalianById(@PathVariable("id") Long id){
         return pengembalianService.getPengembalianById(id);
     }
     
